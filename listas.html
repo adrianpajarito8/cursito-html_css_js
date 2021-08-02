@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <!--Encabezado-->
+    <title>
+        Pajarito Listas
+    </title>
+    <!-- Con la siguiente linea seteamos algunos parámentros entre ellos el uso de UTF-8 para caracteres como acentos o la letra ñ -->
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+</head>
+
+<body>
+    <h1>
+        Listas
+    </h1>
+    <hr>
+    <!-- las listas pueden ser unordered, ordered, descriptivas, nested -->
+
+    <h3>Lista desordenada</h3>
+    <!-- con list-style-type cambiamos el icono de la lista -->
+    <ul style="list-style-type: circle">
+        <li>Harina</li>
+        <li>Salsa de tomate</li>
+        <li>Levadura</li>
+        <li>Queso</li>
+        <li>Jamon crudo</li>
+        <li>Rúcula</li>
+    </ul> <br>
+
+    <h3>Lista ordenada</h3>
+    <!-- con type cambiamos el indicador. Con start el inicio-->
+    <ul 
+    Adriántyp   e="1" start="">
+        <li>Bañarse</li>
+        <li>Desayunar</li>
+        <li>Ir a trabajar</li>
+    </ul> <br>
+
+    <h3>Lista descriptiva</h3>
+
+    <dl>
+        <!-- dt:nombre, dd:descripción -->
+        <dt>HTML</dt>
+        <dd>Primer lenguaje a aprender</dd>
+        <dt>CSS</dt>
+        <dd>Luego de HTML debemos aprender este</dd>
+        <dt>JavaScript</dt>
+        <dd>Finalmente entramos a JavaScript</dd>
+    </dl> <br>
+
+    <h3>Lista combinada</h3>
+    <h4>Hay una lista ordenada y dentro hay una desordenada</h4>
+    <ol>
+        <li>Adrián</li>
+        <ul style="list-style-type: square">
+           <li>Asado</li> 
+           <li>Escabio</li>
+        </ul>
+        <li>Gabi</li>
+        <ul style="list-style-type: square">
+            <li>Hielo</li>
+            <li>Verduras</li>
+        </ul>
+    </ol>
+
+
+</body>
+
+</html>
