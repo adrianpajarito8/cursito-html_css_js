@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--Encabezado-->
+    <title>
+        Pajarito Formulario
+    </title>
+    <!-- Con la siguiente linea seteamos algunos parámentros entre ellos el uso de UTF-8 para caracteres como acentos o la letra ñ -->
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+</head>
+
+<body>
+    <h1>
+        Formulario
+    </h1>
+    <hr>
+
+    <!-- Para user input. Incluye  textfields, checkboxes, etc-->
+    <form action="do_something.php">
+        <table border="0">
+            <!-- con las siguientes lineas unimos la etiqueta con el input -->
+            <!-- primernombre es el id de la etiqueta -->
+            <tr>
+                <th>
+                    <label for="primernombre">Primer Nombre:</label>
+                </th>
+                <!-- id="primernombre" me linkea el input con la etiqueta
+                el name es lo que consultamos para obtener el input -->
+                <th align="left">
+                    <input type="text" id="primernombre" name="primernombre" placeholder="En mayúsculas">
+                </th>
+                <!-- si hacemos click en primer nombre, nos lleva a 
+                la casilla linkeada (probar en la web) -->
+            </tr><br>
+            <tr>
+                <th>
+                    <label for="apellido">Apellido:</label>
+                </th>
+                <th align="left">
+                    <input type="text" id="apellido" name="apellido" placeholder="En mayúsculas">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="estadocivil">Estado Civil:</label>
+                </th>
+                <th align="left">
+                    <table >
+                        <tr>
+                            <th><label for="soltero">Soltero &nbsp&nbsp</label></th>
+                            <th><label for="casado">Casado &nbsp&nbsp</label></th>
+                            <th><label for="divorciado">Divorciado &nbsp&nbsp</label></th>
+                        </tr>
+                        <tr>
+                            <th><input type="radio" id="soltero" name="est_civil"></th>
+                            <th><input type="radio" id="casado" name="est_civil"></th>
+                            <th><input type="radio" id="divorciado" name="est_civil"></th>
+                        </tr>
+                    </table>
+                    <!-- el name es el mismo para indicar que solo uno de ellos
+                    puede ser seleccionado al mismo tiempo -->
+                </th>  
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="mododepago">Modo de Pago:</label>
+                </th>
+                <th align="left">
+                    <select name="mod_pago" id="mododepago">
+                        <option value="no_mododepago">---</option>
+                        <option value="visa">VISA</option>
+                        <option value="mmastercard">Master Card</option>
+                        <option value="americanexpress">American Express</option>
+                    </select>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="email">e-mail:</label>
+                </th>
+                <th align="left">
+                    <!-- como estamos en un formulario, el input email nos pedirá
+                    obligatoriamente tener un @ en este campo al momento de hacer submit -->
+                    <input type="email" id="email" name="email" placeholder="example@gmail.com">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="fechadenacimiento">Fecha de Nacimiento:</label>
+                </th>
+                <th align="left">
+                    <input type="date" id="fechadenacimiento" name="fechadenacimiento" min="1920-01-01" max="2021-12-31">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="nrohijos">Número de hijos:</label>
+                </th>
+                <th align="left">
+                    <input type="number" id="nrohijos" name="nrohijos" min="0" max="10">
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="nrotelefono">Numero de celular:</label>
+                </th>
+                <th align="left">
+                    <input type="tel" id="nrotelefono" name="nrotelefono">
+                    <small>(con código de área)</small>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="contraseña">Contraseña:</label>
+                </th>
+                <th align="left"> 
+                    <input type="password" id="contraseña" name="contraseña" minlength="6" maxlength="20">
+                    <small>(entre 6 y 20 caracteres)</small>
+                </th>
+
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="niveldeurgencia">Nivel de urgencia:</label>
+                </th>
+                <th align="left">
+                    Bajo<input type="range" id="niveldeurgencia" name="niveldeurgencia" min="1" max="3" step="1" value="1">Alto
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="checklegal">Acepto las condiciones de pago:</label>
+                </th>
+                <th align="left">
+                    <input type="checkbox" id="checklegal" name="checklegal"><small>Estoy de acuerdo</small>
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <label for="myfile">Cargar probanza:</label>
+                </th>
+                <th align="left">
+                    <input type="file" id="myfile" name="myfile" accept=".txt,.pdf">
+                    <small>(max 5mb)</small>
+                </th>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="right" height="40">
+                    <input type="submit"> &nbsp&nbsp <input type="reset">
+                </td>
+            </tr>
+            
+        </table>
+
+    </form>
+
+</body>
