@@ -1,0 +1,46 @@
+/* Se puede usar inline, interno o externo.
+
+inline es en la linea donde creamos los headers o los textos como hemos hecho en los html hasta ahora
+interno en los headers del archivo html <Head> como se hizo el html_span_div.html
+externo es desde un archivo css aparte y llamandolo desde el html como haremos aquí
+*/
+
+h1{
+    background-color: rgb(15, 146, 146);
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+}
+#parrafofuentes{
+    background-color: grey;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    padding: 1%;
+}
+h2{
+    font-family: 'Amatic SC', cursive, sans-serif;
+    font-size: 40px;
+    padding: 0%;
+}
+#parrafobordes{
+    border-style: solid;
+    padding: 5px;
+    border-width: 8px; /* probar tambien 'border-width: 8px 7px 6px 3px' para bordes individuales*/
+    border-color: royalblue;
+    border-radius: 15px;
+}
+/* background es mejor que se refiera al html y no al head */
+html{
+    /*background-image: url("./images/fondo.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: scroll*/
+    background-color: rgb(223, 224, 170);
+    background: linear-gradient(grey,white);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}

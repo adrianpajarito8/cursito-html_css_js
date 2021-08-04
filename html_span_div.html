@@ -8,11 +8,35 @@
     </title>
     <!-- Con la siguiente linea seteamos algunos parámentros entre ellos el uso de UTF-8 para caracteres como acentos o la letra ñ -->
     <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+    <style>
+        p{
+            background-color: green;
+            color: rgb(112, 6, 187);
+        }
+        /* llamo al id de un tag especifico para afectarlo con este estilo*/
+        #parrafonuevo{
+            background-color:royalblue;
+        }
+        /* estilo de la clase top */
+        .top{
+            background-color: tan;
+        }
+        /* podemos hacer una clase asociada a un unico tipo de elemento html*/
+        h1.top{
+            background-color: rgb(133, 79, 9);
+        }
+        h3,h4,h5,h6{
+            background-color: rgb(238, 16, 138);
+        }
+    </style>
+    <!-- con esta linea agregamos y linkeamos el archivo css con el style
+    para poder utilizarlo en este html -->
+    <link type="text/css" rel="stylesheet" href="css_style.css">
 </head>
 
 
 <body>
-    <h1>
+    <h1 class="top">
         SPAN AND DIV
     </h1>
     <hr>
@@ -21,8 +45,8 @@
 
     <h2>Span Tag</h2>
     <!-- Agrego un span tag en medio de la seccion de texto que quiero modificar -->
-    <p>
-        Lorem ipsum dolor sit <span style="color: red;">amet consectetur adipisicing elit</span>. Amet, impedit dignissimos? Possimus, sint. 
+    <p class="top">
+        Lorem ipsum dolor sit <span style="color: red">amet consectetur adipisicing elit</span>. Amet, impedit dignissimos? Possimus, sint. 
         Saepe et quos ad eum in dolore, tenetur quae aperiam nemo expedita enim delectus sunt earum tempora?
     </p>
     <hr>
@@ -31,9 +55,26 @@
     <!-- parecido al span pero hace que aparezca como un nuevo bloque entero con un "salto de 
         linea" parecido al <p> pero sin el espacio entre parrafos -->
     <p>
-        <div style="font-weight: bold;">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div><div style="color: red;">Modi ipsa iste suscipit, enim velit adipisci, 
-        libero est facilis possimus impedit praesentium.</div> Eaque nulla perferendis officiis provident nostrum autem dolore aliquid?
+        <div style="color: red">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div><div style="color: red">Modi ipsa iste suscipit, enim velit adipisci, 
+            libero est facilis possimus impedit praesentium.</div> Eaque nulla perferendis officiis provident nostrum autem dolore aliquid?
+            OBSERVAR QUE ESTE <.P.> no tiene el formato dado en el "head" ya que tiene tags de "div" en el.
     </p>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi ipsa iste suscipit, enim velit adipisci, 
+            libero est facilis possimus impedit praesentium. Eaque nulla perferendis officiis provident nostrum autem dolore aliquid?
+            OBSERVAR QUE ESTE <.P.> SI tiene el formato dado en el "head".
+    </p>
+
+
+    <p id="parrafonuevo">
+        Linea de prueba para internal style de CSS
+    </p>
+    <h3>
+        PRUEBA h3
+    </h3>
+    <h2>
+        PRUEBA h2
+    </h2>
     
 
 </body>
