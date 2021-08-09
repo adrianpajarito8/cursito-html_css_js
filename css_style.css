@@ -11,17 +11,17 @@ h1{
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
 }
+h2{
+    font-family: 'Amatic SC', cursive, sans-serif;
+    font-size: 40px;
+    padding: 0%;
+}
 #parrafofuentes{
     background-color: grey;
     color: red;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
     padding: 1%;
-}
-h2{
-    font-family: 'Amatic SC', cursive, sans-serif;
-    font-size: 40px;
-    padding: 0%;
 }
 #parrafobordes{
     border-style: solid;
@@ -38,9 +38,104 @@ html{
     background-size: cover;
     background-attachment: scroll*/
     background-color: rgb(223, 224, 170);
-    background: linear-gradient(grey,white);
+    background: linear-gradient(grey,white,grey);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
 }
+#parrafomargen{
+    /* padding no es lo mismo que margin. padding sirve para poner una distancia
+    equidistante entre digamos, un texto y su contenedor, en este caso, el borde. 
+    En cambio margin es la distancia entre el elemento entero y el borde de la pagina
+    o la distancia relativa a otro elemento*/
+    border: 1px solid;
+    width: 300px;
+    padding: 1%;
+    margin-left: 20px;
+    /* si se usan porcentajes, se toma como referencia el tamaño de la ventana
+    del navegador que estemos usando. */
+}
+#parrafomargen2{
+    border: 1px solid;
+    width: 300px;
+    padding: 1%;
+    margin-left: 50px;
+}
+
+#parrafosombra{
+    font-size: 20px;
+    font-weight: bold;
+    border: 1px solid;
+    width: 300px;
+    padding: 20px;
+    text-shadow: 3px 3px 4px blue,-3px -3px 4px rgba(255, 255, 0, 0.87); /* "horizontal" "vertical" "blur" "color"*/
+}
+
+/* pseudo clases */
+
+/* Es una palabra clave para definir un aspecto especial de un elemento
+solo veremos algunas...*/
+/* Para acceder a todos los textos que tengan hipervínculo. Como los elementos
+tipo <a href=""> cuando todavia no han sido clickeados*/
+a:link{
+    color: green;
+/* Para acceder a todos los textos que tengan hipervínculo y que ya hayan
+sido visitados. Como los elementos tipo <a href=""> una vez clickeados*/
+}
+a:visited{
+    color: red;
+}
+/* La clave hover sirve para estilizar un elemento cuando pasamos el mouse
+sobre el, en este caso modificamos el boton */
+button:hover{
+    background-color: royalblue;
+    color:white
+}
+/* Parecido al hover pero afecta cuando hacemos click o interactuamos
+con el elemento*/
+button:active{
+    background-color: rgb(118, 145, 228);
+    color:white
+}
+/* Resalta el primer elemento en las listas. Tambien tenemos last-child y
+nth-child(i) donde i puede ser un nro o una palabra clave como 'odd' o 'even' */
+li:first-child{
+    background-color: yellowgreen;
+}
+/* esta formula indica que se sombrearán los items en intervalos de 3 */
+li:nth-child(3n+0){
+    background-color: rgb(118, 145, 228);
+    opacity: 0.7;
+}
+
+/* text-align alinea los elementos con la pagina. Si estan dentro de
+un elemento como un borde o una caja se alinean dentro de ellos */
+#AYPcenter{
+    text-align: center;
+}
+#AYPright{
+    text-align: right;
+}
+#AYPleft{
+    text-align: left;
+}
+/* agrego el float para que el párrafo no ocupe todo el ancho de la
+pantalla y se puedan agregar mas cosas. Es util para agregar imagenes
+pequeñas y acompañarlas con texto a su alrededor  */
+#float{
+    float: right;
+}
+/* position: fixed es para setear una posición fija en la ventana para
+que siempre esté visible. Lo usan mucho para cabeceras o botones para volver 
+al top de la página */
+#positiontext{
+    border: 1px solid;
+    background: yellow;
+    width:150px;
+    position: fixed; /* también está la relative, sticky, static y absolute*/
+    bottom: 20px;
+    right: 30px;
+    text-align: center;
+}
+
