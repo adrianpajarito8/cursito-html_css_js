@@ -78,12 +78,12 @@ html{
 solo veremos algunas...*/
 /* Para acceder a todos los textos que tengan hipervínculo. Como los elementos
 tipo <a href=""> cuando todavia no han sido clickeados*/
-a:link{
+#a_1:link{
     color: green;
+}
 /* Para acceder a todos los textos que tengan hipervínculo y que ya hayan
 sido visitados. Como los elementos tipo <a href=""> una vez clickeados*/
-}
-a:visited{
+#a_1:visited{
     color: red;
 }
 /* La clave hover sirve para estilizar un elemento cuando pasamos el mouse
@@ -100,11 +100,12 @@ button:active{
 }
 /* Resalta el primer elemento en las listas. Tambien tenemos last-child y
 nth-child(i) donde i puede ser un nro o una palabra clave como 'odd' o 'even' */
-li:first-child{
+#pseudolista:first-child{
     background-color: yellowgreen;
+    color: red;
 }
 /* esta formula indica que se sombrearán los items en intervalos de 3 */
-li:nth-child(3n+0){
+#pseudolista:nth-child(3n+0){
     background-color: rgb(118, 145, 228);
     opacity: 0.7;
 }
@@ -138,4 +139,92 @@ al top de la página */
     right: 30px;
     text-align: center;
 }
+
+/* ver y analizar la opción "transform" para operar con los elementos
+con opciones como translate, rotate, scale, skew y matrix. La usaremos ahora
+con las animaciones*/
+
+#animado1{
+    width: 300px;
+    height: 100px;
+    background-color:red;
+    font-size: 85px;
+    text-align: center;
+    margin: 0px;
+}
+/* si pasamos el mouse por encima del texto, activa la animación */
+#animado1:hover{
+    animation: coloranimation2,rotateanimation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes coloranimation1 {
+    from{background-color: red;}
+    to{background-color: yellow}
+}
+@keyframes coloranimation2 {
+    0%{background-color: red;}
+    33%{background-color: green;}
+    66%{background-color: yellow;}
+    100%{background-color: red;}
+}
+@keyframes rotateanimation {
+    /* al poner solo 50% se anima a mitad de tiempo 
+    y vuelve a su valor original en el 100% automaticamente */
+    100%{transform: rotateX(360deg);}
+}
+
+/* Creamos una barra de navegación editada*/
+#ul1{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: #444444;
+}
+#nb a{
+    float: left;
+    color: white;
+    font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    border-right: 1px solid black;
+    min-width: 70px;
+}
+#nb a:hover{
+    background-color: rgb(31, 30, 30);
+}
+
+/* FLEXBOX */
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+/* esto significa para todos los elementos div que estén dentro de nuesto
+elemento de clase container */
+.container div{
+    color: white;
+    height: 100px;
+    width: 100px;
+    background-color: rosybrown;
+    text-align: center;
+    line-height: 100px;
+    font-size: 50px;
+    margin: 5px;
+}
+
+/* ICONOS */
+.fa-home{
+    color: blueviolet;
+}
+.fa-youtube{
+    color: red;
+}
+
 
